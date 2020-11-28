@@ -1,7 +1,11 @@
-### TS-NTC-103_simple
+# ACI_10K_AN-temp-sensor
+Read temperature with thermodynamic resistor with negative temperature coefficien (NTC). 
 
-*TS-NTC-103_simple is a simple NTC library containing look up table for the TS-NTC-103 series Thermistor*
+The probe is [ACI_10K_AN](http://www.workaci.com/content/aan-d-4-pb) (duct),
+			[ACI_10K_AN](http://www.workaci.com/content/aan-r) (wall mount).
 
-*Arduino und ESp32 compatible*
+Other option available;
+[workaci](http://www.workaci.com)
 
-This is a modified version of the ACI_10K_AN-temp-sensor library
+  
+  
