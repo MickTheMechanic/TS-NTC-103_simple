@@ -4,13 +4,13 @@
   #include "WProgram.h"
 #endif
 
-#include "ACI_10K_an.h"
+#include "TS-NTC-103_simple.h"
 
 
-Aci_10K::Aci_10K() : resistance{ //resistance array
-	186.1,209.0,235.4,265.8,301,341.9,389.6,445.2,510.6,587.6,678.6,786.6,
-	915.4,1070,1255,1479,1752,2083,2488,2986,3602,4368,5326,6531,8057,10000,
-	12492,15711,19899,25391,32650,42326,55326,72951,97072,130410,176960,242660,336450
+TS_NTC_103::TS_NTC_103() : resistance{ //resistance array
+	301,335,372,415,464,520,596,671,757,857,974,1108,
+	1266,1451,1669,1925,2229,2589,3537,4162,4912,5829,6941,8314,
+	10000,12090,14680,17950,22030,27250,33850,42390,53310,67640		
 	},
 	temp_C{ //temperature array in celcius
 	150,145,140,135,130,125,120,115,110,105,100,95,90,85,80,75,70,65,60,
@@ -20,10 +20,10 @@ Aci_10K::Aci_10K() : resistance{ //resistance array
 	}
 
 
-Aci_10K::Aci_10K(float vRef, int RESO) : resistance{ //resistance array
-	186.1,209.0,235.4,265.8,301,341.9,389.6,445.2,510.6,587.6,678.6,786.6,
-	915.4,1070,1255,1479,1752,2083,2488,2986,3602,4368,5326,6531,8057,10000,
-	12492,15711,19899,25391,32650,42326,55326,72951,97072,130410,176960,242660,336450
+TS_NTC_103::TS_NTC_103(float vRef, int RESO) : resistance{ //resistance array
+	301,335,372,415,464,520,596,671,757,857,974,1108,
+	1266,1451,1669,1925,2229,2589,3537,4162,4912,5829,6941,8314,
+	10000,12090,14680,17950,22030,27250,33850,42390,53310,67640	
 	},
 	temp_C{ //temperature array in celcius
 	150,145,140,135,130,125,120,115,110,105,100,95,90,85,80,75,70,65,60,
@@ -35,7 +35,7 @@ Aci_10K::Aci_10K(float vRef, int RESO) : resistance{ //resistance array
 	}
 
 
-float Aci_10K::getTemp(int reading){//input a bitrade value from analog input
+float TS_NTC_103::getTemp(int reading){//input a bitrade value from analog input
 	float Vin = 0;
 	Vin = reading*_vRef/_RESO;	//find voltage in the input
 	float r = (Vin / (_vRef - Vin) * rRef); //calculate the resistance
