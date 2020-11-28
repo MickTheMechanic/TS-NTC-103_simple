@@ -29,8 +29,8 @@
 
 
 
-#ifndef ACI_10K_an
-#define ACI_10K_an
+#ifndef TS-NTC-103_simple
+#define TS-NTC-103_simple
 
 #if (ARDUINO >= 100)
     #include "Arduino.h"
@@ -43,7 +43,7 @@
 #define rRef 10000
 #endif
 
-class Aci_10K {
+class TS_NTC_103 {
 private:
 	//lookup table
 	const float resistance[39];
@@ -51,8 +51,8 @@ private:
 	float _vRef = 5;
 	int _RESO = 1023;
 public:
-	Aci_10K();
-	Aci_10K(float vRef, int RESO);
+	TS_NTC_103();
+	TS_NTC_103(float vRef, int RESO);
 	float getTemp(int reading);
 };
 
