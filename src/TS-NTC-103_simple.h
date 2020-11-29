@@ -41,6 +41,11 @@
 #define rRef 10000
 #endif
 
+
+#ifndef vRef
+#define vRef 5
+#endif
+
 class TS_NTC_103 {
 private:
 	//lookup table
