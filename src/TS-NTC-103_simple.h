@@ -41,18 +41,17 @@
 #define rRef 10000
 #endif
 
-
 class TS_NTC_103 {
-private:
-	//lookup table
-	const float resistance[39];
-	const int16_t temp_C[39];
-	float _vRef = 5;
-	int _RESO = 1023;
 public:
-	TS_NTC_103();
-	TS_NTC_103(float vRef, int RESO);
+       
+	TS_NTC_103(float vRef = 5, byte RESO = 10);
 	float getTemp(int reading);
+	
+private:
+	
+	int _RESO;
+	float _vRef;
 };
 
 #endif
+
